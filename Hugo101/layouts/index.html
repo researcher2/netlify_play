@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ .Title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet/less" type="text/css" href="css/our_styles.less" />
+    <link href="https://fonts.googleapis.com/css?family=Lato%3A300%2C300italic%2C400%2C400italic%2C700%2C700italic&display=swap"/>
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+    <!-- Add Parralax scrolling -->
+    <div id="header">
+        <a href="/"><img src="img/logo.png" id="logo"></a>
+        <div id="home_link"> 
+            <a href="/">EleutherAI</a>
+        </div>
+
+        <nav>            
+            <ul class="dropdown_menu">
+                <li><a href="home" class="current">Home</a></li>
+                <li><a href="home">About Us</a></li>
+                <li><a href="home">Get Involved</a></li>
+                <li>
+                    <a href="home">Major Projects</a>
+                    <ul>
+                        <li><a href="home">GPT-NEO</a></li>
+                        <li><a href="home">The Pile</a></li>
+                        <li><a href="home">Radioactive Models</a></li>
+                    </ul>   
+                </li>   
+                <li><a href="home">Research Groups</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <!-- Add your site or application content here -->
+    <p>Hello world! This is HTML5 Boilerplate.</p>
+
+    {{ .Content }}
+
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/less" ></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

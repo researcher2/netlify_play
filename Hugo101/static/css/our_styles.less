@@ -1,0 +1,113 @@
+body {
+    /* The image used */
+    background-image: url("/img/brain_background.png");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#header {
+    background-color: black;
+    height: 56px;
+    color: white;
+    display: flex;
+    align-items: stretch;
+
+    #logo {
+        height: 56px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 15px;
+        box-sizing: border-box;      
+    }
+
+    #home_link
+    {
+        display: flex;
+        align-items: center;
+        a {
+            color: white;
+            font-family: Lato, sans-serif;
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 22px;     
+            margin-left: 20px;
+        }
+    }
+
+    nav {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+
+        a.current {
+            font-weight:500
+        }
+
+        a {            
+            font-family: Lato, sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+ul.dropdown_menu {
+    font-size: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: stretch;
+    color: white;
+
+    // initial li
+    li {    
+        padding-left: 10px;    
+        padding-right: 10px;
+
+        display: flex;
+        align-items: center;
+
+        position: relative;
+
+        // secondary ul
+        ul { display: none; }
+
+        // initial li:hover
+        &:hover {
+            cursor: pointer;
+            background-color: darken(white, 80%);
+            
+            // secondary ul visibility change
+            ul {
+                display: block;
+                left: 0;
+                top: 0;
+                margin-top:56px;
+                padding: 0px;
+                width: 170px;
+
+                position: absolute;
+
+                // secondary li
+                li {
+                    display: block;
+                    background-color: black;
+                    height: 56px;
+                    display: flex;
+
+                    &:hover {
+                        background-color: darken(white, 80%);
+                    }
+                }
+            }
+        } 
+    }
+}
